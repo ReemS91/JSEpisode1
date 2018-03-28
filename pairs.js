@@ -17,11 +17,87 @@
 * - It returns an empty array if it gets passed nothing:
 *       pairs() returns []
 ****************************************************************/
-function pairs(names) {
-  // Your code goes here
+/*  MY SOLUTIONS!
+
+1st
+
+let names= [ 'Asis', 'Hamsa', 'Fawas', 'Mishmish']
+
+function pairs = () => {
+	console.log('names');
+	return 'instructors'				// Your code goes here
+}
+
+---------------------------------------------------------------
+
+2nd
+
+function pairs(Asis, Hamsa, Fawas, Mishmish) {
+	var names = {
+		instructors: function (fn) {
+		
+		return fn.bind( Fawas, Hamsa? Asis.concat(Hamsa):[Asis]);
+		},
+		instructor: function (squib) {
+	
+		return Asis.join(' ');
+		}
+	}
+
+	return names[(Hamsa || Asis.split) ? 'instructors' : 'instructor'](name);
 }
 
 export default pairs;
+
+
+------------------------------------------------------------------
+
+3rd
+const pairs = (Asis, Hamsa, Fawas, Mishmish) => {
+    console.log('names');
+    return `${Asis} overrules ${Hamsa} and ${Fawas}`;
+};
+
+pairs("Asis", "Hamsa", "Fawas","Mishmish"); 
+
+
+-------------------------------------------------------------------
+
+4th
+
+const pairs = ['Asis', 'Hamsa', 'Fawas', 'Mishmish'];
+
+for (let i = 0; i < pairs.length; i++) {
+    console.log(pairs[i]);
+}
+
+export default pairs;
+
+
+--------------------------------------------------------------------*/
+
+function pairs(names){
+	names= names || [];
+	pairs = [];
+
+while(names.length>1){
+	pairs.push([ names.getRandom(),names.getRandom()]);
+}
+
+if (names.length){
+	pairs.push([names[0]]); //test
+}
+
+return pairs;
+}
+
+export default pairs;
+
+
+
+
+
+
 
 /**********************************************
 * READ ME!!!!
